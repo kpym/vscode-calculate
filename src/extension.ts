@@ -35,7 +35,7 @@ function runCalculate ( editMaker : IEditMaker ){
 		activeTextEditor.edit( (textEditorEdit) => {
 			activeTextEditor.selections.forEach((selection, index) => {
 
-				var selectedText = activeTextEditor.document.getText(selection).replace(/\$i/g, index + 1);
+				var selectedText = activeTextEditor.document.getText(selection).replace(/\$i/g, String(index + 1));
 
 
 				if ( selectedText === "" ){
